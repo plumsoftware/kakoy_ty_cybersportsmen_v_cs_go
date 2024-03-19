@@ -1,0 +1,202 @@
+:root {
+    --question_card_color: #7B7B7B;
+    --question_card_text_color: #FFF;
+    --question_card_shadow_color: rgba(0, 0, 0, 0.5);
+
+    --answer_card_color: #616161;
+    --answer_card_text_color: #f0f0f0;
+    --answer_card_shadow_color: rgba(0, 0, 0, 0.3);
+    --answer_card_border_color: #000;
+
+    --answer_card_hover_color: #878787;
+
+    --skip_color: #4E4E4E;
+}
+
+
+
+@font-face {
+    font-family: cs_regular;
+    src: url('res/font/cs_regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: top;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+    word-wrap: break-word;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+}
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2% 5%;
+}
+
+button {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8% 8%;
+    border-radius: 2rem;
+    background-color: var(--answer_card_color);
+    color: var(--answer_card_text_color);
+    border: 0.1rem solid var(--answer_card_border_color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+}
+
+button:hover {
+    background-color: var(--answer_card_hover_color);
+    box-shadow: 0 -0.2rem 1.5rem var(--answer_card_shadow_color);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 -0.4rem 2rem var(--answer_card_shadow_color);
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    font-weight: 400;
+}
+
+
+
+.question_card {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+    margin-bottom: 10%;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--question_card_text_color);
+    background-color: var(--question_card_color);
+    box-shadow: 0 -0.3rem 6rem var(--question_card_shadow_color);
+    border-radius: 2rem;
+    border: 0.2rem solid var(--answer_card_border_color);
+}
+
+
+
+.skip {
+    width: fit-content;
+    height: 10%;
+    padding: 2% 5%;
+    box-shadow: 0 -0.3rem 6rem var(--question_card_shadow_color);
+    background-color: var(--skip_color);
+    border-radius: 2rem;
+    color: var(--answer_card_text_color);
+    cursor: pointer;
+}
+
+.skip:hover {
+    background-color: var(--answer_card_hover_color);
+    box-shadow: 0 -0.2rem 1.5rem var(--answer_card_shadow_color);
+    cursor: pointer;
+}
+
+.skip:active {
+    box-shadow: 0 -0.4rem 2rem var(--answer_card_shadow_color);
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    font-weight: 400;
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+
+
+.again {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2% 2%;
+    border-radius: 1.5rem;
+    background-color: var(--answer_card_color);
+    color: var(--answer_card_text_color);
+    border: 0.1rem solid var(--answer_card_border_color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+}
+
+.again:hover {
+    background-color: var(--answer_card_hover_color);
+    box-shadow: 0 -0.2rem 1.5rem var(--answer_card_shadow_color);
+    cursor: pointer;
+}
+
+.again:active {
+    box-shadow: 0 -0.4rem 2rem var(--answer_card_shadow_color);
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    font-weight: 400;
+}
