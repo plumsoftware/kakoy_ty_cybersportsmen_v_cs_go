@@ -33,6 +33,7 @@ body {
     align-items: center;
     vertical-align: top;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -76,7 +77,7 @@ td {
     height: fit-content;
     text-align: center;
     vertical-align: middle;
-    padding: 2% 5%;
+    padding: 2% 4%;
 }
 
 button {
@@ -113,12 +114,11 @@ button:active {
 
 
 .question_card {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    padding: 2% 5%;
-    margin-bottom: 10%;
-    width: 100%;
+    padding: 2% 4%;
+    width: 50%;
+    margin: 2% auto;
     max-width: 100%;
     height: fit-content;
     text-align: center;
@@ -131,6 +131,11 @@ button:active {
     border: 0.2rem solid var(--answer_card_border_color);
 }
 
+.question_card h3,
+.question_card h4 {
+  max-width: 100%;
+  width: 100%;
+}
 
 
 .skip {

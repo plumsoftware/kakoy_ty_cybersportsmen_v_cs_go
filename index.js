@@ -35,20 +35,20 @@ YaGames
 		console.log("Yandex SDK initialized");
 
 		initPlayer().then(_player => {
-        if (_player.getMode() === 'lite') {
-            // Игрок не авторизован.
-        		console.log("Игрок не авторизован");
-            ysdk.auth.openAuthDialog().then(() => {
-                    // Игрок успешно авторизован
-                    initPlayer().catch(err => {
-                        // Ошибка при инициализации объекта Player.
-                    	console.log("Ошибка при инициализации объекта Player");
-                    });
-                }).catch(() => {
-                    // Игрок не авторизован.
-                		console.log("Игрок не авторизован");
-                });
-        }
+        // if (_player.getMode() === 'lite') {
+        //     // Игрок не авторизован.
+        // 		console.log("Игрок не авторизован");
+        //     ysdk.auth.openAuthDialog().then(() => {
+        //             // Игрок успешно авторизован
+        //             initPlayer().catch(err => {
+        //                 // Ошибка при инициализации объекта Player.
+        //             	console.log("Ошибка при инициализации объекта Player");
+        //             });
+        //         }).catch(() => {
+        //             // Игрок не авторизован.
+        //         		console.log("Игрок не авторизован");
+        //         });
+        // }
     }).catch(err => {
         // Ошибка при инициализации объекта Player.
     		console.log("Ошибка при инициализации объекта Player");
