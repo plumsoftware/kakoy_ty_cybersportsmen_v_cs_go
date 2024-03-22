@@ -137,16 +137,26 @@ button:active {
   width: 100%;
 }
 
+#question_text {
+    font-size: 1.7rem;
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .skip {
     width: fit-content;
     height: 10%;
-    padding: 2% 5%;
+    padding: 3% 5%;
     box-shadow: 0 -0.3rem 6rem var(--question_card_shadow_color);
     background-color: var(--skip_color);
     border-radius: 2rem;
     color: var(--answer_card_text_color);
     cursor: pointer;
+    display: none;
 }
 
 .skip:hover {

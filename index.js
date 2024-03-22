@@ -75,7 +75,6 @@ function initPlayer() {
 }
 
 
-
 //Создание вопросов
 class Question {
   constructor(question, answers) {
@@ -143,7 +142,7 @@ var questions = [
 	new Question('Какое звание самое высокое в игре', ['Глобал', 'Кароль', 'Тут нет такого', 'Сильвер']),
 	new Question('Что такое ноу скоп', ['Выстрел без прицела', 'Выстрел в прыжке', 'Бесшумная ходьба', 'Выбросить оружие']),
 	new Question('Сколько у тебя было ноу скопов', ['0-2', '2-5', '5-10', 'Больше 10']),
-	new Question('На какой карте нужно спассать заложников', ['Assault', 'Dust 2', 'Italy', 'Nuke']),
+	new Question('На какой карте нужно спасать заложников', ['Assault', 'Dust 2', 'Italy', 'Nuke']),
 	new Question('Сколько заложников можно спасти на карте Assault', ['Только 1', '4', '8', 'Нет верного ответа']),
 	new Question('Какой карты нет в игре', ['Vertigo', 'Mirage', 'Zoo', 'Nuke']),
 	new Question('Сколько подсадок знаешь на карте Dust 2', ['0-1', '2-3', '4-5', 'Больше 5']),
@@ -162,13 +161,13 @@ var questions = [
 	new Question('Что из перечисленного НЕ пистолет', ['P2000', 'Револьвер', 'пп - Бизон', 'USP']),
 	new Question('Продолжи название: SSG...', ['20', '007', '08', '0']),
 	new Question('Заверши название: SG...', ['500', '553', 'Ничего', '123']),
-	new Question('UMP...', ['2000', '008', '45', '54']),
+	new Question('в игре: UMP...', ['2000', '008', '45', '54']),
 	new Question('Если с USP снять глушитель, то урон увеличиться', ['Верно', 'Неверно', 'В кс го нет такого', 'Глушитель нельзя снять']),
 	new Question('Какое оружие было в кс го 1.6', ['Щит', 'Мечь', 'Кулаки', 'Всё перечисленное']),
 	new Question('Сколько раундов в соревновательном режиме', ['15', '30', '10', '5']),
 	new Question('Из скольки игроков состоит команда в соревновательном режиме', ['3', '5', '10', '2']),
 	new Question('Что будет, если в соревновательном режиме выйдет игрок', ['Будет бот вместо него', 'Команда из 4 игроков', 'Ничего', 'Игра закончиться']),
-	new Question('Сколько раундов нужно выиграть, чтобы победить в соревновательном режиме в кс го', ['10', '15', '30', '29']),
+	new Question('Сколько раундов нужно выиграть, чтобы победить в соревновательном режиме в кс го', ['10', '16', '30', '29']),
 	new Question('Ты читерил в кс го', ['1 раз ради интереса', 'Постоянно', 'Никогда', 'Не скажу']),
 	new Question('В кс го есть кейсы?', ['Нет', 'Были раньше', 'Да', 'Планируют добавить']),
 	new Question('Зачем нужны кейсы в кс го', ['Просто так', 'Их нет в игре', 'Чтобы получить скины', 'Нет подходящего ответа']),
@@ -186,9 +185,18 @@ var questions = [
 	new Question('Сколько секунд обезвреживается с4 в кс го', ['Моментально', '10', '20', '15']),
 	new Question('Есть ли в кс го анимированные эмоции персонажей как в Фортнайте', ['Да', 'Нет', 'Не знаю', 'Есть, но не у всех']),
 	new Question('Можно ли управлять транспортов в кс го как в Фортнайте', ['Да', 'Нет', 'Не знаю', 'Можно, но не во всех режимах']),
-	new Question('Сколько снайперов в кс го', ['3', '4', '5', '6']),
+	new Question('Сколько снайперок в кс го', ['3', '4', '5', '6']),
 	new Question('Есть ли скины на гранаты в кс го', ['Да', 'Да, но не на все', 'Нет', 'Не знаю']),
 	new Question('Можно ли нанести урон флешкой в кс го', ['Да', 'Да, если попасть в игрока', 'Нет, только ослепить', 'Не знаю']),
+	new Question('Есть ли скины на перчатки в кс го', ['Да', 'Нет', 'В кс го нет перчаток', 'Не знаю']),
+	new Question('Какой буст дают скины на перчатки в кс го', ['Уменьшают время перезарядки', 'Быстрее бегаешь', 'Никакого', 'Увеличивают здоровье']),
+	new Question('Есть ли скины на обувь в кс го', ['Нету', 'Есть', 'Нет, есть только скины на перчатки', 'Не знаю']),
+	new Question('Что такое "eco round" в CS:GO и когда его стоит применять?', ['Экологически-чистый раунд','Не знаю','Пистолетный раунд','Такого нет']),
+	new Question('Что такое "boosting" в CS:GO и какие последствия это может иметь для игроков?', ['Не знаю', 'Повышения уровня игроков','Такого нет', 'Игра без голосового чата']),
+	new Question('Самая популярная карта?', ['Dust II', 'Dust','Dragon lore', 'Всё вышеперечисленное']),
+	new Question('Какие гранаты покупаешь в первую очередь в игре', ['Флешка', 'Ложная','Молотов', 'Осколочная']),
+	new Question('Что даёт набор сапера в игре', ['Ускоряет обезвреживание', 'Ничего','Ускоряет плент бомбы в игре', 'В игре нет такого']),
+	new Question('Сколько на карте предмета с4 в соревновательном режиме в кс го', ['5, по числу игроков', '0','1', '2, по одной с каждой стороны']),
 ];
 
 function shuffleArray(array) {
@@ -201,25 +209,30 @@ function shuffleArray(array) {
 
 questions = shuffleArray(questions);
 
-
 //Работа с вопросами
 const table = document.querySelector('table');
 const buttons = document.querySelectorAll('button');
 const header = document.querySelector('h1');
 let currentQuestionIndex = 0;
 
-var currentQuestion = questions[currentQuestionIndex]
+var currentQuestion = questions[currentQuestionIndex];
+var finishQuestion = questions.length;
 header.innerText = currentQuestion.question;
 for (let i = 0; i < currentQuestion.answers.length; i++) {
 	buttons[i].innerText = currentQuestion.answers[i];
 }
 
+show_skip();
 buttons.forEach((button, i) => {
 	button.addEventListener('click', () => {
 		currentQuestionIndex++;
 
+		// if (currentQuestionIndex == 3) {
+		// 	skip.style.display = 'block';
+		// }
+
 			//Если последний вопрос
-    	if (currentQuestionIndex >= questions.length) {
+    	if (currentQuestionIndex >= finishQuestion) {
     		document.querySelector('table').style.display = 'none';
     		document.querySelector('h1').style.display = 'none';
 
@@ -234,6 +247,7 @@ buttons.forEach((button, i) => {
     		icon.src = `res/players/${c.icon}`;
     		name.innerText = c.name;
     		coin_.innerText = c.money;
+    		finishQuestion = questions.length;
 
     	} else {
     		var currentQuestion = questions[currentQuestionIndex]
@@ -289,35 +303,39 @@ again.addEventListener('click', () => {
   again.style.display = 'none';
 
   currentQuestionIndex = 0;
+  finishQuestion = questions.length;
 });
 
 //Ads
 
 function skip_questions() {
-	ysdk.adv.showRewardedVideo({
+	if (currentQuestionIndex < (finishQuestion - 3)) {
+		ysdk.adv.showRewardedVideo({
     callbacks: {
         onOpen: () => {
           console.log('Video ad open.');
+          hide_skip();
+          setInterval(show_skip, 180000);
         },
         onRewarded: () => {
           console.log('Rewarded!');
 
-          currentQuestionIndex = 0;
+          finishQuestion = finishQuestion - 3;
 
-          document.querySelector('table').style.display = 'none';
-	    		document.querySelector('h1').style.display = 'none';
+          // document.querySelector('table').style.display = 'none';
+	    		// document.querySelector('h1').style.display = 'none';
 
-	    		icon.style.display = 'block';
-	    		name.style.display = 'block';
-	    		coin.style.display = 'block';
-	    		coin_.style.display = 'block';
-	    		again.style.display = 'block';
+	    		// icon.style.display = 'block';
+	    		// name.style.display = 'block';
+	    		// coin.style.display = 'block';
+	    		// coin_.style.display = 'block';
+	    		// again.style.display = 'block';
 
-	    		let c = get_cybersportsmen();
+	    		// let c = get_cybersportsmen();
 
-	    		icon.src = `res/players/${c.icon}`;
-	    		name.innerText = c.name;
-	    		coin_.innerText = c.money;
+	    		// icon.src = `res/players/${c.icon}`;
+	    		// name.innerText = c.name;
+	    		// coin_.innerText = c.money;
         },
         onClose: () => {
           console.log('Video ad closed.');
@@ -325,26 +343,35 @@ function skip_questions() {
         onError: (e) => {
           console.log('Error while open video ad:', e);
 
-          currentQuestionIndex = 0;
+          finishQuestion = finishQuestion - 3;
 
-          document.querySelector('table').style.display = 'none';
-	    		document.querySelector('h1').style.display = 'none';
+          // document.querySelector('table').style.display = 'none';
+	    		// document.querySelector('h1').style.display = 'none';
 
-	    		icon.style.display = 'block';
-	    		name.style.display = 'block';
-	    		coin.style.display = 'block';
-	    		coin_.style.display = 'block';
-	    		again.style.display = 'block';
+	    		// icon.style.display = 'block';
+	    		// name.style.display = 'block';
+	    		// coin.style.display = 'block';
+	    		// coin_.style.display = 'block';
+	    		// again.style.display = 'block';
 
-	    		let c = get_cybersportsmen();
+	    		// let c = get_cybersportsmen();
 
-	    		icon.src = `res/players/${c.icon}`;
-	    		name.innerText = c.name;
-	    		coin_.innerText = c.money;
+	    		// icon.src = `res/players/${c.icon}`;
+	    		// name.innerText = c.name;
+	    		// coin_.innerText = c.money;
         }
     }
-	});
+		});
+	}
 }
-// skip.addEventListener('click', () => {
-	
-// });
+
+function show_skip() {
+	if (currentQuestionIndex >= (finishQuestion - 3)) {
+		skip.style.display = 'none';
+	} else {
+		skip.style.display = 'block';
+	}
+}
+function hide_skip() {
+	skip.style.display = 'none';
+}
