@@ -24,6 +24,7 @@ let coin = document.getElementById('coin');
 let coin_ = document.getElementById('coin_');
 let again = document.getElementById('again');
 let skip = document.getElementById('skip');
+let progress = document.getElementById('progress');
 
 
 //Yandex Games
@@ -223,14 +224,14 @@ for (let i = 0; i < currentQuestion.answers.length; i++) {
 	buttons[i].innerText = currentQuestion.answers[i];
 }
 
-show_skip();
+
 buttons.forEach((button, i) => {
 	button.addEventListener('click', () => {
 		currentQuestionIndex++;
 
-		// if (currentQuestionIndex == 3) {
-		// 	skip.style.display = 'block';
-		// }
+			if (currentQuestionIndex == 3) {
+				show_skip();
+			}
 
 			//Если последний вопрос
     	if (currentQuestionIndex >= finishQuestion) {
@@ -280,11 +281,6 @@ var cybersportsmenList = [
  new CyberSportsmen("NAF", 645741, "naf.jpg"),
  new CyberSportsmen("dupreeh", 641298, "dupreeh.jpg"),
  new CyberSportsmen("gla1ve", 632283, "gla1ve.jpg"),
- // new CyberSportsmen("Xyp9x", 628050, "icon11"),
- // new CyberSportsmen("Brehze", 624381, "icon12"),
- // new CyberSportsmen("valde", 617565, "icon13"),
- // new CyberSportsmen("twistzz", 610540, "icon14"),
- // new CyberSportsmen("Koosta", 598089, "icon15"),
 ]
 
 function get_cybersportsmen() {
@@ -311,55 +307,30 @@ again.addEventListener('click', () => {
 
 function skip_questions() {
 	if (currentQuestionIndex < (finishQuestion - 3)) {
+		progress.style.display = 'flex';
 		ysdk.adv.showRewardedVideo({
     callbacks: {
         onOpen: () => {
+        	progress.style.display = 'none';
           console.log('Video ad open.');
           hide_skip();
           setInterval(show_skip, 240000);
         },
         onRewarded: () => {
+        	progress.style.display = 'none';
           console.log('Rewarded!');
 
           finishQuestion = finishQuestion - 3;
-
-          // document.querySelector('table').style.display = 'none';
-	    		// document.querySelector('h1').style.display = 'none';
-
-	    		// icon.style.display = 'block';
-	    		// name.style.display = 'block';
-	    		// coin.style.display = 'block';
-	    		// coin_.style.display = 'block';
-	    		// again.style.display = 'block';
-
-	    		// let c = get_cybersportsmen();
-
-	    		// icon.src = `res/players/${c.icon}`;
-	    		// name.innerText = c.name;
-	    		// coin_.innerText = c.money;
         },
         onClose: () => {
+        	progress.style.display = 'none';
           console.log('Video ad closed.');
         }, 
         onError: (e) => {
+        	progress.style.display = 'none';
           console.log('Error while open video ad:', e);
 
           finishQuestion = finishQuestion - 3;
-
-          // document.querySelector('table').style.display = 'none';
-	    		// document.querySelector('h1').style.display = 'none';
-
-	    		// icon.style.display = 'block';
-	    		// name.style.display = 'block';
-	    		// coin.style.display = 'block';
-	    		// coin_.style.display = 'block';
-	    		// again.style.display = 'block';
-
-	    		// let c = get_cybersportsmen();
-
-	    		// icon.src = `res/players/${c.icon}`;
-	    		// name.innerText = c.name;
-	    		// coin_.innerText = c.money;
         }
     }
 		});
